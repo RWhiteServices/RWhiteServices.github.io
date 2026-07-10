@@ -2,7 +2,7 @@
 Professional portfolio and business platform for Rachael White Services. 
 <html>
   <head>
-    <title>Rachael White - Three W'S Bar</title>
+   Rachael White - Three W'S Bar
   </head>
   <body>
     <h1>Welcome to My Digital Headquarters!</h1>
