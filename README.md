@@ -1,6 +1,5 @@
 # RWhiteServices.github.io
 Professional portfolio and business platform for Rachael White Services. 
-<!DOCTYPE html>
 <html>
   <head>
     <title>Rachael White - Three W'S Bar</title>
@@ -16,5 +15,4 @@ Professional portfolio and business platform for Rachael White Services.
     Street" is used because it serves a similar purpose to a main street road, offering many different things, and most importantly, 
     being convenient to people. Businesses can advertise their products or services significantly cheaper by using the web. This 
     allows customers to have easy access that is customized to their own needs.<p/> 
-    </body> 
-</html>
+
