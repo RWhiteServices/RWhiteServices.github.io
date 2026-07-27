@@ -1,5 +1,4 @@
-<!DOCUTYPE html>
-<html>
+<!DOCTYPE html>
   <head>
     <title>Rachael White - Three W'S Bar</title>
   </head>
@@ -7,6 +6,7 @@
 <nav>
       <a href="/pages/about.html">About Rachael White Services</a>
     </nav>
+<main>
       <p>The web is today's "Main Street" because it allows businesses to have a place to connect with their intended audience 
     and customers across the world. This also allows businesses to reach people at any time, making it more convenient to reach 
     their goals and strive for greatness. The chapter says that the web is a global marketplace because it has the power to serve
@@ -16,5 +16,6 @@
     Street" is used because it serves a similar purpose to a main street road, offering many different things, and most importantly, 
     being convenient to people. Businesses can advertise their products or services significantly cheaper by using the web. This 
     allows customers to have easy access that is customized to their own needs.</p> 
-    </body> 
+  </main>
+    </body>
 </html>
