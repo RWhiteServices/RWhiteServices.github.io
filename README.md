@@ -5,6 +5,10 @@ Professional portfolio and business platform for Rachael White Services.
    Rachael White - Three W'S Bar
   </head>
   <body>
+    <nav>
+      <a href="/pages/about.html">About Rachael White Services</a>
+    </nav>
+
       <p>The web is today's "Main Street" because it allows businesses to have a place to connect with their intended audience 
     and customers across the world. This also allows businesses to reach people at any time, making it more convenient to reach 
     their goals and strive for greatness. The chapter says that the web is a global marketplace because it has the power to serve
