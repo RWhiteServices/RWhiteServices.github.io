@@ -1,0 +1,31 @@
+name: Convert sitemap SVG to PNG
+
+on:
+  push:
+    paths:
+      - 'images/sitemap.svg'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install rsvg-convert (librsvg)
+        run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
+
+      - name: Convert SVG → PNG (1200x360)
+        run: |
+          mkdir -p images
+          rsvg-convert -w 1200 -h 360 -f png -o images/sitemap.png images/sitemap.svg
+
+      - name: Commit & push generated PNG
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Add generated images/sitemap.png from images/sitemap.svg"
+          file_pattern: "images/sitemap.png"
