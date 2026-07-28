@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<png xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="title desc">
   <title id="title">Rachael White Services - Site Mindmap</title>
   <desc id="desc">A simple SVG mindmap showing site structure: Home, Services (Consultation, Service Overview, Packages), About (Team, Mission), Contact (Email, Contact Form, Phone) centered on "Rachael White Services".</desc>
   <!-- background rounded panel -->
@@ -54,4 +54,4 @@
   <!-- subtle baseline line at bottom like image -->
   <line x1="20" y1="332" x2="1180" y2="332" stroke="#222" stroke-width="2" stroke-linecap="round"/>
 
-</png>
+</svg>
