@@ -5,16 +5,36 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About — Rachael White Services</title>
   <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    /* Header/nav shared styles (kept local for now) */
+    .header-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 20px;border-bottom:1px solid #e6e6e6}
+    .brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit}
+    .nav-logo{height:56px;width:auto;margin-right:14px;display:block}
+    nav[aria-label="Primary"] ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
+    nav[aria-label="Primary"] li{display:inline}
+    nav[aria-label="Primary"] a{text-decoration:none;color:inherit;padding:6px 8px}
+    @media (max-width:720px){.nav-logo{height:48px}}
+    main{max-width:1100px;margin:22px auto;padding:0 20px}
+  </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/pages/about.html">About</a></li>
-      <li><a href="/pages/services.html">Services</a></li>
-      <li><a href="/pages/contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <div class="header-top">
+      <a class="brand" href="/index.html" aria-label="Rachael White Services home">
+        <img src="/pages/images/rw-logo.png" alt="Rachael White Services logo" class="nav-logo">
+      </a>
+
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/services.html">Services</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <h1>Local Businesses Change Their Success Rate with Customers</h1>
