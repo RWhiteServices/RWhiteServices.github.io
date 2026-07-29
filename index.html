@@ -6,42 +6,68 @@
   <title>Rachael White - Three W'S Bar: A Professional Portfolio and Business Platform for Rachael White Services.</title>
   <link rel="stylesheet" href="/styles.css">
 
-  <!-- Scoped styles: add sidebar layout without changing site-wide stylesheet -->
+  <!-- Scoped styles for the header/hero addition (small, non-invasive) -->
   <style>
-    :root{--rw-green:#29402f;--rw-green-muted:#556b55}
-    body{font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin:0; color:#222}
-
     /* Header layout */
     .site-header { border-bottom: 1px solid #e6e6e6; }
-    .header-top { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:12px 20px; }
-    .brand { display:inline-flex; align-items:center; text-decoration:none; color:inherit; }
-    .nav-logo { display:block; height:56px; width:auto; margin-right:14px; }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-logo {
+      display: block;
+      height: 56px; /* small logo beside nav; adjust as needed */
+      width: auto;
+      margin-right: 14px;
+    }
+
+    nav[aria-label="Primary"] ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    nav[aria-label="Primary"] a {
+      color: inherit;
+      text-decoration: none;
+      padding: 6px 8px;
+    }
 
     /* Hero area */
-    .hero { padding:36px 20px; text-align:center; background:var(--hero-bg,#fafafa); }
-    .hero h1 { margin:0 0 10px; font-size:2.1rem; line-height:1.1; color:var(--rw-green); }
-    .hero p.hero-sub { margin:0; color:var(--rw-green-muted); font-size:1.05rem; }
+    .hero {
+      padding: 36px 20px;
+      text-align: center;
+      background: var(--hero-bg, #fafafa);
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2.1rem;
+      line-height: 1.1;
+      color: #29402f;
+    }
+    .hero p.hero-sub {
+      margin: 0;
+      color: #556b55;
+      font-size: 1.05rem;
+    }
 
-    /* Layout: left sidebar + main content */
-    .layout { display:flex; gap:24px; align-items:flex-start; padding:20px; max-width:1100px; margin:0 auto; }
-    .sidebar { width:220px; flex:0 0 220px; }
-    .sidebar ul { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
-    .sidebar a { display:block; padding:8px 10px; text-decoration:none; color:inherit; border-radius:6px; }
-    .sidebar a:hover { background:#f2f6f2; }
-    .content { flex:1; min-width:0; }
-
-    /* Sitemap image container */
-    .sitemap-image img { max-width:100%; height:auto; display:block; }
-
-    footer { padding:18px 20px; text-align:center; color:#666 }
-
-    /* Responsive: stack on small screens */
-    @media (max-width:880px) {
-      .layout { flex-direction:column; padding:12px; }
-      .sidebar { width:100%; order:2; }
-      .content { order:1; }
-      .nav-logo { height:48px; }
-      .hero h1 { font-size:1.6rem; }
+    /* Small responsive adjustments */
+    @media (min-width: 720px) {
+      .hero h1 { font-size: 2.8rem; }
+      .nav-logo { height: 64px; }
     }
   </style>
 </head>
@@ -49,7 +75,8 @@
   <header class="site-header" role="banner">
     <div class="header-top">
       <a class="brand" href="/index.html" aria-label="Rachael White Services home">
-        <img src="/pages/images/rw-logo.png" alt="Rachael White Services logo" class="nav-logo" />
+        <!-- Reference the exact uploaded filename (URL-encoded) so the image displays -->
+        <img src="/pages/images/Rachael%20White%20Servies%20LOGO.png" alt="Rachael White Services logo" class="nav-logo" />
       </a>
 
       <nav aria-label="Primary">
@@ -68,20 +95,10 @@
     </div>
   </header>
 
-  <div class="layout">
-    <nav class="sidebar" aria-label="Site menu">
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/pages/about.html">About</a></li>
-        <li><a href="/pages/services.html">Services</a></li>
-        <li><a href="/pages/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <main class="content" id="main">
-      <!-- Keep original content; main heading remains an H1 here for accessibility consistency -->
-      <h1>Three W'S Bar/ Professional Portfolio: Rachael White Services</h1>
-      <p>The web is today's "Main Street" because it allows businesses to have a place to connect with their intended audience 
+  <main>
+    <!-- Demoted the original top heading to an h2 so the page has a single h1 in the header hero -->
+    <h2>Three W'S Bar / Professional Portfolio: Rachael White Services</h2>
+    <p>The web is today's "Main Street" because it allows businesses to have a place to connect with their intended audience 
 and customers across the world. This also allows businesses to reach people at any time, making it more convenient to reach 
 their goals and strive for greatness. The chapter says that the web is a global marketplace because it has the power to serve
 more than 5.6 billion people at a time. This shows how much the web and our online communities really connect people and have 
@@ -91,16 +108,15 @@ Street" is used because it serves a similar purpose to a main street road, offer
 being convenient to people. Businesses can advertise their products or services significantly cheaper by using the web. This 
 allows customers to have easy access that is customized to their own needs.</p>
 
-      <section id="sitemap" aria-labelledby="sitemap-heading">
-        <h2 id="sitemap-heading">Site map</h2>
-        <div class="sitemap-image">
-          <!-- Load the uploaded PNG from the raw.githubusercontent.com URL to avoid Jekyll underscore filtering -->
-          <img src="https://raw.githubusercontent.com/RWhiteServices/RWhiteServices.github.io/main/pages/images/_images_sitemap.drawio.png" alt="Site map for Rachael White Services" loading="lazy">
-        </div>
-      </section>
+    <section id="sitemap" aria-labelledby="sitemap-heading">
+      <h2 id="sitemap-heading">Site map</h2>
+      <div class="sitemap-image">
+        <!-- Load the uploaded PNG from the raw.githubusercontent.com URL to avoid Jekyll underscore filtering -->
+        <img src="https://raw.githubusercontent.com/RWhiteServices/RWhiteServices.github.io/main/pages/images/_images_sitemap.drawio.png" alt="Site map for Rachael White Services" loading="lazy">
+      </div>
+    </section>
 
-    </main>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2026 Rachael White Services</p>
