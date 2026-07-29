@@ -5,19 +5,99 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Rachael White - Three W'S Bar: A Professional Portfolio and Business Platform for Rachael White Services.</title>
   <link rel="stylesheet" href="/styles.css">
+
+  <!-- Scoped styles for the header/hero addition (small, non-invasive) -->
+  <style>
+    /* Header layout */
+    .site-header { border-bottom: 1px solid #e6e6e6; }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-logo {
+      display: block;
+      height: 56px; /* small logo beside nav; adjust as needed */
+      width: auto;
+      margin-right: 14px;
+    }
+
+    nav[aria-label="Primary"] ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    nav[aria-label="Primary"] a {
+      color: inherit;
+      text-decoration: none;
+      padding: 6px 8px;
+    }
+
+    /* Hero area */
+    .hero {
+      padding: 36px 20px;
+      text-align: center;
+      background: var(--hero-bg, #fafafa);
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2.1rem;
+      line-height: 1.1;
+      color: #29402f;
+    }
+    .hero p.hero-sub {
+      margin: 0;
+      color: #556b55;
+      font-size: 1.05rem;
+    }
+
+    /* Small responsive adjustments */
+    @media (min-width: 720px) {
+      .hero h1 { font-size: 2.8rem; }
+      .nav-logo { height: 64px; }
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/pages/about.html">About</a></li>
-      <li><a href="/pages/services.html">Services</a></li>
-      <li><a href="/pages/contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="header-top">
+      <a class="brand" href="/index.html" aria-label="Rachael White Services home">
+        <!-- I will add your exact logo image to the repo at /pages/images/rw-logo.png when you approve -->
+        <img src="/pages/images/rw-logo.png" alt="Rachael White Services logo" class="nav-logo" />
+      </a>
+
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/services.html">Services</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hero" role="region" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Rachael White Services</h1>
+      <p class="hero-sub">Reliable. Professional. Dedicated to you.</p>
+    </div>
+  </header>
 
   <main>
-    <h1>Three W'S Bar/ Professional Portfolio: Rachael White Services</h1>
+    <!-- Demoted the original top heading to an h2 so the page has a single h1 in the header hero -->
+    <h2>Three W'S Bar / Professional Portfolio: Rachael White Services</h2>
     <p>The web is today's "Main Street" because it allows businesses to have a place to connect with their intended audience 
 and customers across the world. This also allows businesses to reach people at any time, making it more convenient to reach 
 their goals and strive for greatness. The chapter says that the web is a global marketplace because it has the power to serve
