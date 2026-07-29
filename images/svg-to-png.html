@@ -1,1 +1,37 @@
-
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>SVG → PNG Converter</title></head>
+<body>
+  <h3>SVG → PNG Converter (set width 1200 & height 360)</h3>
+  <input id="file" type="file" accept=".svg"><br><br>
+  <button id="convert">Convert & Download</button>
+  <script>
+    document.getElementById('convert').onclick = async () => {
+      const f = document.getElementById('file').files[0];
+      if (!f) return alert('Choose an SVG file first');
+      const svgText = await f.text();
+      const img = new Image();
+      const svgBlob = new Blob([svgText], {type:'image/svg+xml'});
+      const url = URL.createObjectURL(svgBlob);
+      img.onload = () => {
+        const w = 1200, h = 360;
+        const c = document.createElement('canvas');
+        c.width = w; c.height = h;
+        const ctx = c.getContext('2d');
+        // white background
+        ctx.fillStyle = '#ffffff'; ctx.fillRect(0,0,w,h);
+        ctx.drawImage(img, 0, 0, w, h);
+        c.toBlob(blob => {
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'sitemap.png';
+          a.click();
+          URL.revokeObjectURL(url);
+        }, 'image/png');
+      };
+      img.onerror = ()=>{ alert('Error rendering SVG in browser; try Inkscape or rsvg-convert'); URL.revokeObjectURL(url); };
+      img.src = url;
+    };
+  </script>
+</body>
+</html>
