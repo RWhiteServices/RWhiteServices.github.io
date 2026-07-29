@@ -1,0 +1,27 @@
+/* Rachael White Services - centralized site styles */
+:root{--rw-green:#29402f;--rw-green-muted:#556b55}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#222}
+
+/* Header/nav */
+.site-header{border-bottom:1px solid #e6e6e6}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 20px}
+.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit}
+.nav-logo{height:56px;width:auto;display:block;margin-right:12px}
+.primary-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
+.primary-nav li{display:inline}
+.primary-nav a{text-decoration:none;color:inherit;padding:6px 8px;border-radius:6px}
+.primary-nav a:hover{background:#f2f6f2}
+.primary-nav a.active{background:#e9efe9;font-weight:600}
+
+/* Hero */
+.hero{padding:36px 20px;text-align:center;background:var(--hero-bg,#fafafa)}
+.hero h1{margin:0 0 10px;font-size:2.1rem;line-height:1.1;color:var(--rw-green)}
+.hero p.hero-sub{margin:0;color:var(--rw-green-muted);font-size:1.05rem}
+
+/* Layout */
+main{max-width:1100px;margin:22px auto;padding:0 20px}
+footer{padding:18px 20px;text-align:center;color:#666}
+
+/* Responsive */
+@media (min-width:720px){.nav-logo{height:64px}.hero h1{font-size:2.8rem}}
+@media (max-width:720px){.nav-logo{height:48px}.primary-nav ul{gap:10px}}
