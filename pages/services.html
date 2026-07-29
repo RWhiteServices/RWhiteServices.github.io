@@ -5,35 +5,73 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Services — Three W's Bar</title>
   <link rel="stylesheet" href="/styles.css">
+
+  <!-- Scoped header/sidebar styles for consistent navigation -->
+  <style>
+    :root{--rw-green:#29402f;--rw-green-muted:#556b55}
+    .site-header{border-bottom:1px solid #e6e6e6}
+    .header-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 20px}
+    .brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit}
+    .nav-logo{display:block;height:56px;width:auto;margin-right:14px}
+    nav[aria-label="Primary"] ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
+    nav[aria-label="Primary"] a{text-decoration:none;color:inherit;padding:6px 8px}
+    .layout{display:flex;gap:24px;align-items:flex-start;padding:20px;max-width:1100px;margin:0 auto}
+    .sidebar{width:220px;flex:0 0 220px}
+    .sidebar ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+    .sidebar a{display:block;padding:8px 10px;text-decoration:none;color:inherit;border-radius:6px}
+    .sidebar a:hover{background:#f2f6f2}
+    .content{flex:1;min-width:0}
+    footer{padding:18px 20px;text-align:center;color:#666}
+    @media (max-width:880px){.layout{flex-direction:column}.sidebar{width:100%;order:2}.content{order:1}.nav-logo{height:48px}}
+  </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/pages/about.html">About</a></li>
-      <li><a href="/pages/services.html">Services</a></li>
-      <li><a href="/pages/contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="header-top">
+      <a class="brand" href="/index.html" aria-label="Rachael White Services home">
+        <img src="/pages/images/rw-logo.png" alt="Rachael White Services logo" class="nav-logo">
+      </a>
 
-  <main>
-    <h1>Three W's Bar — Services</h1>
-    <p>Three W's Bar is a boutique event service from Rachael White Services offering mobile bar experiences, curated boutique clothing, and fun event add-ons for weddings, parties, corporate events, and more.</p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/services.html">Services</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h2>What we offer</h2>
-    <ul>
-      <li><strong>Mobile Bar Services</strong> — Professional bartenders, full mobile bar setup, signature cocktails, mocktails, and beverage packages tailored to your event size and style.</li>
-      <li><strong>Boutique Clothing</strong> — Curated selection of dresses, accessories, and themed attire for hosts and guests; styling and rental options available.</li>
-      <li><strong>Event Extras</strong> — Bar-themed decor, cocktail menu design, glassware rental, bar staff, and coordination with caterers and venues.</li>
-      <li><strong>Custom Packages</strong> — Wedding packages, party packages, and corporate/event bundles that combine bar services, attire, and add-ons at a discounted rate.</li>
-    </ul>
+  <div class="layout">
+    <nav class="sidebar" aria-label="Site menu">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/services.html">Services</a></li>
+        <li><a href="/pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-    <h2>How booking works</h2>
-    <p>Tell us about your event (date, guest count, venue, and style). We'll recommend a package or build a custom offering to fit your needs and budget. We handle setup, service, and teardown so you can enjoy the celebration.</p>
+    <main class="content">
+      <h1>Three W's Bar — Services</h1>
+      <p>Three W's Bar is a boutique event service from Rachael White Services offering mobile bar experiences, curated boutique clothing, and fun event add-ons for weddings, parties, corporate even[...]</p>
 
-    <h2>Ready to plan?</h2>
-    <p>For a quote or to check availability, <a href="/pages/contact.html">contact us</a> or email <a href="mailto:hello@rachaelwhite.services">hello@rachaelwhite.services</a>.</p>
-  </main>
+      <h2>What we offer</h2>
+      <ul>
+        <li><strong>Mobile Bar Services</strong> — Professional bartenders, full mobile bar setup, signature cocktails, mocktails, and beverage packages tailored to your event size and style.</li>
+        <li><strong>Boutique Clothing</strong> — Curated selection of dresses, accessories, and themed attire for hosts and guests; styling and rental options available.</li>
+        <li><strong>Event Extras</strong> — Bar-themed decor, cocktail menu design, glassware rental, bar staff, and coordination with caterers and venues.</li>
+        <li><strong>Custom Packages</strong> — Wedding packages, party packages, and corporate/event bundles that combine bar services, attire, and add-ons at a discounted rate.</li>
+      </ul>
+
+      <h2>How booking works</h2>
+      <p>Tell us about your event (date, guest count, venue, and style). We'll recommend a package or build a custom offering to fit your needs and budget. We handle setup, service, and teardown so you can enjoy the event.</p>
+
+      <h2>Ready to plan?</h2>
+      <p>For a quote or to check availability, <a href="/pages/contact.html">contact us</a> or email <a href="mailto:hello@rachaelwhite.services">hello@rachaelwhite.services</a>.</p>
+    </main>
+  </div>
 
   <footer>
     <p>&copy; 2026 Three W's Bar — Rachael White Services</p>
