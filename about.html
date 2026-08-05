@@ -2,25 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Rachael White Services</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/css/main.css" />
+
+  <style>
+    .site-header { border-bottom: 1px solid #e6e6e6; }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-logo {
+      display: block;
+      height: 56px;
+      width: auto;
+      margin-right: 14px;
+    }
+
+    nav[aria-label="Primary"] ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    nav[aria-label="Primary"] li { display: inline; }
+
+    nav[aria-label="Primary"] a {
+      text-decoration: none;
+      color: inherit;
+      padding: 6px 8px;
+    }
+
+    @media (min-width: 720px) {
+      .nav-logo { height: 64px; }
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/pages/about.html">About</a></li>
-      <li><a href="/pages/services.html">Services</a></li>
-      <li><a href="/pages/contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="header-top">
+      <div class="brand">
+        <img src="/pages/images/Rachael%20White%20Servies%20LOGO.png" alt="Rachael White Services logo" class="nav-logo" />
+      </div>
+
+      <nav aria-label="Primary" class="primary-nav">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/services.html">Services</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <h1>Local Businesses Change Their Success Rate with Customers</h1>
-
-    <img src="/pages/images/Rachael%20White%20Servies%20LOGO.png"/>
-      </a> alt="Rachael White Services Helping Customers Feel Welcomed">
 
     <p>A website serves many different purposes and does not simply exist to share information. It should serve the audience and grab
     their attention, build a community, and encourage customers to engage. Websites also serve a strong purpose in working hard for
