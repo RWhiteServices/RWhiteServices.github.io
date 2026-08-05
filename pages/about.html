@@ -4,29 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About — Rachael White Services</title>
-  <link rel="stylesheet" href="/styles.css">
-
-  <style>
-    /* Header/nav shared styles (kept local for now) */
-    .header-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 20px;border-bottom:1px solid #e6e6e6}
-    .brand{display:inline-flex;align-items:center;color:inherit}
-    .nav-logo{height:56px;width:auto;margin-right:14px;display:block}
-    nav[aria-label="Primary"] ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
-    nav[aria-label="Primary"] li{display:inline}
-    nav[aria-label="Primary"] a{text-decoration:none;color:inherit;padding:6px 8px}
-    @media (max-width:720px){.nav-logo{height:48px}}
-    main{max-width:1100px;margin:22px auto;padding:0 20px}
-  </style>
+  <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="header-top">
       <div class="brand">
-        <!-- Use the repository's URL-encoded filename (non-clickable) -->
-        <img src="/pages/images/Rachael%20White%20Servies%20LOGO.png" alt="Rachael White Services logo" class="nav-logo">
+        <img src="/pages/images/Rachael%20White%20Servies%20LOGO.png" alt="Rachael White Services logo" class="nav-logo" />
       </div>
 
-      <nav aria-label="Primary">
+      <nav aria-label="Primary" class="primary-nav">
         <ul>
           <li><a href="/index.html">Home</a></li>
           <li><a href="/pages/about.html">About</a></li>
@@ -39,6 +26,11 @@
 
   <main>
     <h1>Local Businesses Change Their Success Rate with Customers</h1>
+
+    <img
+      src="/pages/images/Rachael%20White%20Servies%20LOGO.png"
+      alt="Rachael White Services helping customers feel welcomed."
+    />
 
     <p>A website serves many different purposes and does not simply exist to share information. It should serve the audience and grab
     their attention, build a community, and encourage customers to engage. Websites also serve a strong purpose in working hard for
