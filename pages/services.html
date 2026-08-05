@@ -5,11 +5,49 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Services — Three W's Bar</title>
   <link rel="stylesheet" href="/css/main.css" />
+
+  <!-- Match Home page header/nav/logo sizing -->
   <style>
+    .site-header { border-bottom: 1px solid #e6e6e6; }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
     .nav-logo {
-      height: 56px;
-      width: auto;
       display: block;
+      height: 56px;   /* same as Home */
+      width: auto;
+      margin-right: 14px;
+    }
+
+    nav[aria-label="Primary"] ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    nav[aria-label="Primary"] a {
+      color: inherit;
+      text-decoration: none;
+      padding: 6px 8px;
+    }
+
+    @media (min-width: 720px) {
+      .nav-logo { height: 64px; }  /* same as Home */
     }
   </style>
 </head>
@@ -17,7 +55,7 @@
   <header class="site-header">
     <div class="header-top">
       <div class="brand">
-        <img src="/pages/images/Rachael%20White%20Servies%20LOGO.png" alt="Rachael White Services logo" class="nav-logo">
+        <img src="/pages/images/Rachael%20White%20Servies%20LOGO.png" alt="Rachael White Services logo" class="nav-logo" />
       </div>
 
       <nav aria-label="Primary" class="primary-nav">
@@ -47,7 +85,7 @@
     <p>Tell us about your event (date, guest count, venue, and style). We'll recommend a package or build a custom offering to fit your needs and budget. We handle setup, service, and teardown so you can enjoy the event.</p>
 
     <h2>Ready to plan?</h2>
-    <p>For a quote or to check availability, <a href="/pages/contact.html">contact us</a> or email <a href="mailto:hello@rachaelwhite.services">hello@rachaelwhite.services</a>.</p>
+    <p>For a quote or to check availability, <a href="/pages/contact.html" class="btn-primary">Contact Us</a> or email <a href="mailto:hello@rachaelwhite.services">hello@rachaelwhite.services</a>.</p>
   </main>
 
   <footer>
