@@ -31,3 +31,16 @@ img {
   border-radius: 6px;
   font-weight: 600;
 }
+
+/* Added step: media query for screens <= 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.05rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
