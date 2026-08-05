@@ -6,10 +6,15 @@
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #dfe8dc; /* light sage green */
   font-family: "MySiteFont", Arial, sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -20,6 +25,7 @@ h1 {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .btn-primary {
@@ -32,6 +38,50 @@ img {
   font-weight: 600;
 }
 
+/* Header + top-right menu layout */
+.site-header {
+  padding: 1vh 2vw;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Keep logo small */
+.nav-logo {
+  width: 8vw;
+  max-width: 64px;
+  min-width: 40px;
+  height: auto;
+  display: block;
+}
+
+/* Menu on top right */
+.main-nav {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #1f2a1f;
+  font-weight: 600;
+}
+
+/* Visible keyboard focus for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 2px;
+}
+
 /* Step: media query for screens <= 768px */
 @media (max-width: 768px) {
   body {
@@ -42,6 +92,16 @@ img {
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .nav-logo {
+    width: 12vw;
+    max-width: 56px;
+    min-width: 36px;
+  }
+
+  .main-nav {
+    gap: 3vw;
   }
 }
 
