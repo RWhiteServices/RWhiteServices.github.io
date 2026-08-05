@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Services — Three W's Bar</title>
   <link rel="stylesheet" href="/css/main.css" />
 
-  <!-- Match Home page header/nav/logo sizing -->
   <style>
     .site-header { border-bottom: 1px solid #e6e6e6; }
     .header-top {
@@ -26,7 +25,7 @@
 
     .nav-logo {
       display: block;
-      height: 56px;   /* same as Home */
+      height: 56px;
       width: auto;
       margin-right: 14px;
     }
@@ -40,14 +39,16 @@
       align-items: center;
     }
 
+    nav[aria-label="Primary"] li { display: inline; }
+
     nav[aria-label="Primary"] a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
       padding: 6px 8px;
     }
 
     @media (min-width: 720px) {
-      .nav-logo { height: 64px; }  /* same as Home */
+      .nav-logo { height: 64px; }
     }
   </style>
 </head>
