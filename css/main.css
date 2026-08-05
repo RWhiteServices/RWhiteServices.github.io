@@ -7,8 +7,9 @@
 }
 
 body {
-  background-color: #f7f4ef;
+  background-color: #dfe8dc; /* light sage green */
   font-family: "MySiteFont", Arial, sans-serif;
+  margin: 0;
 }
 
 h1 {
@@ -24,7 +25,7 @@ img {
 .btn-primary {
   display: inline-block;
   background-color: #7a1f1f;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   padding: 10px 16px;
   border-radius: 6px;
