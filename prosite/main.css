@@ -63,3 +63,39 @@ th, td {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
 }
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap; /* keeps logo left + nav right on desktop */
+}
+
+nav[aria-label="Global navigation"] {
+  margin-left: auto;          /* pushes nav to the right */
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav[aria-label="Global navigation"] a {
+  margin: 0;                  /* avoid old margin-right conflicts */
+  text-decoration: none;
+  color: #1f2a1f;
+  font-weight: 600;
+}
+
+/* mobile stack only */
+@media (max-width: 768px) {
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  nav[aria-label="Global navigation"] {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
