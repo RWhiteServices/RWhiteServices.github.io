@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mountain Bean Café | Subscription</title>
-  <meta name="description" content="Choose a Mountain Bean Café coffee subscription plan and enjoy fresh small-batch beans delivered to your door." />
+  <meta name="description" content="Choose a Mountain Bean Café coffee subscription plan and unlock member perks, free rewards, and fresh small-batch beans delivered to your door." />
   <meta name="robots" content="index,follow" />
   <style>
     :root {
@@ -14,6 +14,7 @@
       --brand-dark: #4b3426;
       --card: #ffffff;
       --border: #d8cfc5;
+      --perk-bg: #fff8ee;
     }
 
     * { box-sizing: border-box; }
@@ -32,7 +33,7 @@
     }
 
     .site-wrap {
-      max-width: 980px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -61,9 +62,7 @@
     nav a:hover,
     nav a:focus { text-decoration: underline; }
 
-    main {
-      padding: 28px 20px;
-    }
+    main { padding: 28px 20px; }
 
     .card {
       background: var(--card);
@@ -71,13 +70,9 @@
       padding: 22px;
     }
 
-    h2 {
-      margin-top: 0;
-    }
+    h2 { margin-top: 0; }
 
-    .lead {
-      margin-bottom: 18px;
-    }
+    .lead { margin-bottom: 16px; }
 
     table {
       width: 100%;
@@ -92,13 +87,22 @@
       vertical-align: top;
     }
 
-    th {
-      background: #f1eae2;
+    th { background: #f1eae2; }
+
+    .perk-box {
+      background: var(--perk-bg);
+      border: 1px solid #ecd9bf;
+      border-radius: 8px;
+      padding: 14px;
+      margin: 12px 0 20px;
     }
 
-    .cta-wrap {
-      margin-top: 8px;
+    .perk-box h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
     }
+
+    .cta-wrap { margin-top: 8px; }
 
     .cta-button {
       display: inline-block;
@@ -111,8 +115,12 @@
     }
 
     .cta-button:hover,
-    .cta-button:focus {
-      background: var(--brand-dark);
+    .cta-button:focus { background: var(--brand-dark); }
+
+    .fine-print {
+      font-size: 0.9rem;
+      color: #5a4a3f;
+      margin-top: 8px;
     }
 
     footer p {
@@ -141,17 +149,20 @@
       <h2>Coffee Subscription Plans</h2>
 
       <p class="lead">
-        Keep your mornings easy with freshly roasted Mountain Bean coffee delivered on your schedule.
-        Our plans are flexible, affordable, and designed for everyone from casual coffee drinkers to
-        daily brew enthusiasts.
+        Get fresh Mountain Bean coffee delivered to your door and enjoy members-only perks at the café.
+        Every subscription includes access to our Coffee Perks Card so your everyday coffee routine turns
+        into rewards.
       </p>
 
-      <p class="lead">
-        Choose the plan that fits your routine, and enjoy balanced, small-batch flavor without running out.
-        Cancel or change anytime.
-      </p>
+      <div class="perk-box">
+        <h3>Coffee Perks Card (included with every plan)</h3>
+        <p>
+          Earn 1 stamp for each monthly subscription renewal. Collect 6 stamps and choose a free reward:
+          <strong>one pastry, one specialty drink, or one 12 oz house-roast bag</strong>.
+        </p>
+      </div>
 
-      <!-- 4x3 table: header row + 3 plan rows, and 3 columns -->
+      <!-- 4x3 table: header + 3 plan rows -->
       <table aria-label="Mountain Bean Café subscription pricing table">
         <thead>
           <tr>
@@ -163,18 +174,27 @@
         <tbody>
           <tr>
             <td>Starter Plan</td>
-            <td>$14 / month</td>
-            <td>1 bag (12 oz), monthly delivery, rotating house blend</td>
+            <td>$16 / month</td>
+            <td>
+              1 × 12 oz bag monthly, Coffee Perks Card access, birthday free drip coffee,
+              subscriber-only brew tips email
+            </td>
           </tr>
           <tr>
             <td>Trail Plan</td>
-            <td>$24 / month</td>
-            <td>2 bags (12 oz each), monthly delivery, choice of roast level</td>
+            <td>$28 / month</td>
+            <td>
+              2 × 12 oz bags monthly, choose roast profile, 10% off in-café beans,
+              Coffee Perks Card + double stamp month every July
+            </td>
           </tr>
           <tr>
             <td>Summit Plan</td>
-            <td>$34 / month</td>
-            <td>3 bags (12 oz each), priority roasting, free shipping, early seasonal access</td>
+            <td>$42 / month</td>
+            <td>
+              3 × 12 oz bags monthly, free shipping, early access to seasonal blends,
+              1 free drink voucher each month + Coffee Perks Card priority rewards
+            </td>
           </tr>
         </tbody>
       </table>
@@ -182,6 +202,7 @@
       <div class="cta-wrap">
         <a class="cta-button" href="contact.html">Subscribe now</a>
       </div>
+      <p class="fine-print">Rewards reset after redemption. Terms apply in-store.</p>
     </div>
   </main>
 
