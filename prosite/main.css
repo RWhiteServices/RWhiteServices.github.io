@@ -1,14 +1,41 @@
-/* Prevent horizontal scrolling on very small screens */
+@font-face {
+  font-family: "MySiteFont";
+  src: url("fonts/MySiteFont.woff2") format("woff2"),
+       url("fonts/MySiteFont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f7f3ee;
+  --text: #2b2118;
+  --brand: #7a1f1f;
+  --brand-dark: #5e1717;
+  --card: #ffffff;
+  --border: #d8cfc5;
+  --muted: #5a4a3f;
+}
+
+/* Global reset + small-screen safety */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body {
+  margin: 0;
+  font-family: "MySiteFont", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
 }
 
 img,
@@ -22,91 +49,49 @@ table {
 table {
   width: 100%;
   table-layout: fixed;
+  border-collapse: collapse;
 }
 
 th, td {
   overflow-wrap: anywhere;
   word-break: break-word;
-}
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 14px;
-  justify-items: center;
-  margin-top: 16px;
-}
-
-.gallery-grid a {
-  display: inline-block;
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 4px;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Shared layout */
+header, footer {
   background: #fff;
+  padding: 16px 20px;
 }
 
-.gallery-grid img {
-  width: 120px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
+main {
+  padding: 28px 20px;
 }
 
-.note {
-  font-size: 0.92rem;
-  color: #5a4a3f;
-  margin-top: 14px;
+.site-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-@media (max-width: 500px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-  }
-}
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: nowrap; /* keeps logo left + nav right on desktop */
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 22px;
 }
 
-nav[aria-label="Global navigation"] {
-  margin-left: auto;          /* pushes nav to the right */
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  justify-content: flex-end;
+footer p {
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
 }
 
-nav[aria-label="Global navigation"] a {
-  margin: 0;                  /* avoid old margin-right conflicts */
-  text-decoration: none;
-  color: #1f2a1f;
-  font-weight: 600;
-}
-
-/* mobile stack only */
-@media (max-width: 768px) {
-  .topbar {
-    flex-wrap: wrap;
-  }
-
-  nav[aria-label="Global navigation"] {
-    width: 100%;
-    margin-left: 0;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-}
-/* ===== GLOBAL HEADER/NAV CONSISTENCY OVERRIDE ===== */
+/* ===== HEADER/NAV: consistent across all pages ===== */
 header,
 header * {
   font-family: "MySiteFont", Arial, sans-serif !important;
-}
-
-header {
-  background: #ffffff !important;
 }
 
 header .topbar,
@@ -154,6 +139,38 @@ header .main-nav a:focus {
   text-decoration: underline !important;
 }
 
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 14px;
+  justify-items: center;
+  margin-top: 16px;
+}
+
+.gallery-grid a {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px;
+  background: #fff;
+}
+
+.gallery-grid img {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.note {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+/* Responsive design requirement: at least 2 media queries <= 768 */
 @media (max-width: 768px) {
   header .topbar,
   header .header-inner {
@@ -168,4 +185,28 @@ header .main-nav a:focus {
     flex-wrap: wrap !important;
     gap: 10px !important;
   }
+
+  .card {
+    padding: 16px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
 }
+
+@media (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
+
+/* Extra 360px protection */
+@media (max-width: 360px) {
+  header, main, footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .card
