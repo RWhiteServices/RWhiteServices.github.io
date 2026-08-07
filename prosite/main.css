@@ -208,5 +208,9 @@ header .main-nav a:focus {
     padding-left: 12px;
     padding-right: 12px;
   }
-
+.hero {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/Mountain%20cafe%20.webp");
+}
   .card
