@@ -1,1 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain Bean Café | Contact</title>
+  <meta name="description" content="Visit Mountain Bean Café in Greeley, Colorado. View our hours, location, and contact us by email." />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --text: #2b2118;
+      --brand: #6f4e37;
+      --brand-dark: #4b3426;
+      --card: #ffffff;
+      --border: #d8cfc5;
+    }
 
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background: #fff;
+      padding: 16px 20px;
+    }
+
+    .site-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--brand-dark);
+      margin-right: 14px;
+      font-weight: 600;
+    }
+
+    nav a:last-child { margin-right: 0; }
+
+    nav a:hover,
+    nav a:focus { text-decoration: underline; }
+
+    main {
+      padding: 28px 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .hours-list {
+      margin: 10px 0 18px;
+      padding-left: 18px;
+    }
+
+    .hours-list li {
+      margin-bottom: 6px;
+    }
+
+    .map-wrap {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      display: block;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 8px;
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 11px 18px;
+      border-radius: 8px;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: var(--brand-dark);
+    }
+
+    .small-note {
+      color: #5a4a3f;
+      font-size: 0.92rem;
+      margin-top: 10px;
+    }
+
+    footer p {
+      margin: 0;
+      text-align: center;
+      color: #5a4a3f;
+    }
+
+    @media (max-width: 760px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-wrap iframe {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-wrap topbar">
+      <h1 class="logo">Mountain Bean Café</h1>
+      <nav aria-label="Global navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="site-wrap card">
+      <h2>Visit Us in Greeley</h2>
+
+      <div class="contact-grid">
+        <section aria-label="Address and hours">
+          <p><strong>Mountain Bean Café</strong></p>
+          <p>
+            801 8th Ave<br>
+            Greeley, CO 80631
+          </p>
+
+          <h3>Café Hours</h3>
+          <ul class="hours-list">
+            <li>Monday: 6:30 AM – 4:00 PM</li>
+            <li>Tuesday: 6:30 AM – 4:00 PM</li>
+            <li>Wednesday: 6:30 AM – 4:00 PM</li>
+            <li>Thursday: 6:30 AM – 4:00 PM</li>
+            <li>Friday: 6:30 AM – 5:00 PM</li>
+            <li>Saturday: 7:00 AM – 5:00 PM</li>
+            <li>Sunday: 7:00 AM – 2:00 PM</li>*
+
