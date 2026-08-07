@@ -1,1 +1,30 @@
+/* Prevent horizontal scrolling on very small screens */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+iframe,
+video,
+table {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+th, td {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
