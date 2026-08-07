@@ -265,3 +265,47 @@ nav[aria-label="Global navigation"] a {
     flex-wrap: wrap;
   }
 }
+/* ===== FINAL NAV OVERRIDE (put at very end of main.css) ===== */
+header .topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+header .logo {
+  margin: 0;
+  white-space: nowrap;
+}
+
+header nav[aria-label="Global navigation"] {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+  width: auto;
+}
+
+header nav[aria-label="Global navigation"] a {
+  display: inline-block;
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  header .topbar {
+    flex-wrap: wrap;
+  }
+
+  header nav[aria-label="Global navigation"] {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
