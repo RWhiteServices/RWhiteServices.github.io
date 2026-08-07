@@ -1,1 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain Bean Café | Subscription</title>
+  <meta name="description" content="Choose a Mountain Bean Café coffee subscription plan and enjoy fresh small-batch beans delivered to your door." />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --text: #2b2118;
+      --brand: #6f4e37;
+      --brand-dark: #4b3426;
+      --card: #ffffff;
+      --border: #d8cfc5;
+    }
 
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background: #fff;
+      padding: 16px 20px;
+    }
+
+    .site-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--brand-dark);
+      margin-right: 14px;
+      font-weight: 600;
+    }
+
+    nav a:last-child { margin-right: 0; }
+
+    nav a:hover,
+    nav a:focus { text-decoration: underline; }
+
+    main {
+      padding: 28px 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .lead {
+      margin-bottom: 18px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0 22px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1eae2;
+    }
+
+    .cta-wrap {
+      margin-top: 8px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 8px;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus {
+      background: var(--brand-dark);
+    }
+
+    footer p {
+      margin: 0;
+      text-align: center;
+      color: #5a4a3f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-wrap topbar">
+      <h1 class="logo">Mountain Bean Café</h1>
+      <nav aria-label="Global navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="site-wrap card">
+      <h2>Coffee Subscription Plans</h2>
+
+      <p class="lead">
+        Keep your mornings easy with freshly roasted Mountain Bean coffee delivered on your schedule.
+        Our plans are flexible, affordable, and designed for everyone from casual coffee drinkers to
+        daily brew enthusiasts.
+      </p>
+
+      <p class="lead">
+        Choose the plan that fits your routine, and enjoy balanced, small-batch flavor without running out.
+        Cancel or change anytime.
+      </p>
+
+      <!-- 4x3 table: header row + 3 plan rows, and 3 columns -->
+      <table aria-label="Mountain Bean Café subscription pricing table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Price</th>
+            <th>Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Starter Plan</td>
+            <td>$14 / month</td>
+            <td>1 bag (12 oz), monthly delivery, rotating house blend</td>
+          </tr>
+          <tr>
+            <td>Trail Plan</td>
+            <td>$24 / month</td>
+            <td>2 bags (12 oz each), monthly delivery, choice of roast level</td>
+          </tr>
+          <tr>
+            <td>Summit Plan</td>
+            <td>$34 / month</td>
+            <td>3 bags (12 oz each), priority roasting, free shipping, early seasonal access</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="cta-wrap">
+        <a class="cta-button" href="contact.html">Subscribe now</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="site-wrap">
+      <p>&copy; 2026 Mountain Bean Café. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
