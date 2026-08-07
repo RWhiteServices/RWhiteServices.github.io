@@ -139,6 +139,51 @@ header .main-nav a:focus {
   text-decoration: underline !important;
 }
 
+/* Home hero */
+.hero {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 48px 20px;
+  color: #fff;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("images/Mountain%20cafe%20.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0 0 10px;
+}
+
+.hero p {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  margin: 0 0 24px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 8px;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background: var(--brand-dark);
+}
+
 /* Gallery */
 .gallery-grid {
   display: grid;
@@ -170,7 +215,7 @@ header .main-nav a:focus {
   margin-top: 14px;
 }
 
-/* Responsive design requirement: at least 2 media queries <= 768 */
+/* Responsive */
 @media (max-width: 768px) {
   header .topbar,
   header .header-inner {
@@ -202,15 +247,13 @@ header .main-nav a:focus {
   }
 }
 
-/* Extra 360px protection */
 @media (max-width: 360px) {
   header, main, footer {
     padding-left: 12px;
     padding-right: 12px;
   }
-.hero {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("images/Mountain%20cafe%20.webp");
+
+  .card {
+    padding: 14px;
+  }
 }
-  .card
