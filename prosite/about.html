@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mountain Bean Café | Gallery</title>
-  <meta name="description" content="Browse photos of Mountain Bean Café drinks, pastries, and cozy café moments." />
+  <title>Mountain Bean Café | About</title>
+  <meta name="description" content="Read the Mountain Bean Café origin story and meet the people behind our small-batch Colorado coffee." />
   <meta name="robots" content="index,follow" />
   <style>
     :root {
@@ -12,7 +12,6 @@
       --text: #2b2118;
       --brand-dark: #4b3426;
       --card: #ffffff;
-      --border: #d8cfc5;
     }
 
     * { box-sizing: border-box; }
@@ -22,7 +21,7 @@
       font-family: Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     header, footer {
@@ -31,7 +30,7 @@
     }
 
     .site-wrap {
-      max-width: 980px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -64,7 +63,7 @@
       padding: 28px 20px;
     }
 
-    .card {
+    .story-card {
       background: var(--card);
       border-radius: 10px;
       padding: 22px;
@@ -74,46 +73,28 @@
       margin-top: 0;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(100px, 1fr));
-      gap: 14px;
-      justify-items: center;
-      margin-top: 16px;
+    figure {
+      margin: 22px 0 0;
     }
 
-    .gallery-grid a {
-      display: inline-block;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 4px;
-      background: #fff;
-    }
-
-    .gallery-grid img {
-      width: 120px;   /* requirement: thumbnails ≤ 120px wide */
-      max-width: 100%;
+    img {
+      width: 100%;
+      max-width: 620px;
       height: auto;
       display: block;
-      border-radius: 4px;
+      border-radius: 8px;
     }
 
-    .note {
-      font-size: 0.92rem;
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.95rem;
       color: #5a4a3f;
-      margin-top: 14px;
     }
 
     footer p {
       margin: 0;
       text-align: center;
       color: #5a4a3f;
-    }
-
-    @media (max-width: 500px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, minmax(100px, 1fr));
-      }
     }
   </style>
 </head>
@@ -132,45 +113,21 @@
   </header>
 
   <main>
-    <div class="site-wrap card">
-      <h2>Photo Gallery</h2>
-      <p>Click any thumbnail to open the full-size image.</p>
+    <div class="site-wrap story-card">
+      <h2>Our Origin Story</h2>
 
-      <div class="gallery-grid">
-        <a href="full1.png">
-          <img src="thumb1.png" alt="Sunlit cup of black coffee on a café table near a bright window.">
-        </a>
-        <a href="full2.png">
-          <img src="thumb2.png" alt="Barista pouring milk into espresso to create latte art in a white cup.">
-        </a>
-        <a href="full3.png">
-          <img src="thumb3.png" alt="Fresh baked muffins displayed on a wooden stand inside the café.">
-        </a>
-        <a href="full4.png">
-          <img src="thumb4.png" alt="Roasted coffee beans spilling from a burlap sack onto a wooden surface.">
-        </a>
-        <a href="full5.png">
-          <img src="thumb5.png" alt="Three people holding coffee drinks together, including latte art and iced coffee.">
-        </a>
-        <a href="full6.png">
-          <img src="thumb6.png" alt="Two iced coffee drinks in clear glasses with coffee beans on the table.">
-        </a>
-        <a href="full7.png">
-          <img src="thumb7.png" alt="Barista tamping espresso grounds in a portafilter at the coffee machine.">
-        </a>
-        <a href="full8.png">
-          <img src="thumb8.png" alt="Barista preparing a drink at an espresso machine inside the café.">
-        </a>
-        <a href="full9.png">
-          <img src="thumb9.png" alt="Coffee and pastries on a café table beside Mountain Bean Café branding.">
-        </a>
-      </div>
-
-      <p class="note">
-        Make sure these files exist in <code>prosite/</code> exactly as:
-        <code>thumb1.png</code> to <code>thumb9.png</code> and
-        <code>full1.png</code> to <code>full9.png</code>.
+      <p>
+        Every summer, Colorado’s mountain towns come alive with hikers, road-trippers, and families looking to experience everything the area has to offer. Along the way, we noticed that grabbing a great cup of coffee often meant settling for either convenience or quality. Locals wanted a café they could count on, and visitors deserved a place that felt welcoming instead of rushed. That’s what inspired Mountain Bean Café. We wanted to create a space where people could slow down before heading out on the trail, enjoy coffee that’s been thoughtfully sourced and roasted, and feel like they were genuinely welcomed—not just another order in line.
       </p>
+
+      <p>
+        From the beginning, our goal has been simple: serve exceptional small-batch coffee with friendly, consistent service every single day. We carefully source our beans, roast them to bring out balanced, approachable flavors, and train our team to make every guest feel at home. Whether you’re visiting for one morning during a mountain getaway or keeping Mountain Bean in your routine through our coffee subscription, you can expect the same thing every time—a fresh cup of coffee, crafted with care, and an experience that keeps you coming back.
+      </p>
+
+      <figure>
+        <img src="staff-photo.png" alt="Mountain Bean Café team members smiling and waving together inside the café.">
+        <figcaption>Meet the Mountain Bean team.</figcaption>
+      </figure>
     </div>
   </main>
 
