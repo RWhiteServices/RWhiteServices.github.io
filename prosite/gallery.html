@@ -1,1 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain Bean Café | Gallery</title>
+  <meta name="description" content="Browse photos of Mountain Bean Café drinks, pastries, and cozy café moments." />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --text: #2b2118;
+      --brand-dark: #4b3426;
+      --card: #ffffff;
+      --border: #d8cfc5;
+    }
 
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    header, footer {
+      background: #fff;
+      padding: 16px 20px;
+    }
+
+    .site-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--brand-dark);
+      margin-right: 14px;
+      font-weight: 600;
+    }
+
+    nav a:last-child { margin-right: 0; }
+
+    nav a:hover,
+    nav a:focus { text-decoration: underline; }
+
+    main {
+      padding: 28px 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      gap: 14px;
+      justify-items: center;
+      margin-top: 16px;
+    }
+
+    .gallery-grid a {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px;
+      background: #fff;
+    }
+
+    .gallery-grid img {
+      width: 120px;      /* requirement: thumbnails ≤ 120px wide */
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .note {
+      font-size: 0.92rem;
+      color: #5a4a3f;
+      margin-top: 14px;
+    }
+
+    footer p {
+      margin: 0;
+      text-align: center;
+      color: #5a4a3f;
+    }
+
+    @media (max-width: 500px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-wrap topbar">
+      <h1 class="logo">Mountain Bean Café</h1>
+      <nav aria-label="Global navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="site-wrap card">
+      <h2>Photo Gallery</h2>
+      <p>Click any thumbnail to open the full-size image.</p>
+
+      <div class="gallery-grid">
+        <a href="gallery/full1.jpg">
+          <img src="gallery/thumb1.jpg" alt="Freshly brewed black coffee in a white cup on a wooden café table.">
+        </a>
+        <a href="gallery/full2.jpg">
+          <img src="gallery/thumb2.jpg" alt="Barista pouring latte art into a ceramic mug at Mountain Bean Café.">
+        </a>
+        <a href="gallery/full3.jpg">
+          <img src="gallery/thumb3.jpg" alt="Display case of croissants, muffins, and pastries in the café.">
+        </a>
+        <a href="gallery/full4.jpg">
+          <img src="gallery/thumb4.jpg" alt="Coffee beans being poured from a burlap bag onto a counter.">
+        </a>
+        <a href="gallery/full5.jpg">
+          <img src="gallery/thumb5.jpg" alt="Customer reading by a window with a hot cappuccino nearby.">
+        </a>
+        <a href="gallery/full6.jpg">
+          <img src="gallery/thumb6.jpg" alt="Mountain Bean Café storefront with outdoor seating on a sunny day.">
+        </a>
+        <a href="gallery/full7.jpg">
+          <img src="gallery/thumb7.jpg" alt="Iced coffee with caramel drizzle beside a pastry plate.">
+        </a>
+        <a href="gallery/full8.jpg">
+          <img src="gallery/thumb8.jpg" alt="Staff members smiling behind the counter during morning service.">
+        </a>
+        <a href="gallery/full9.jpg">
+          <img src="gallery/thumb9.jpg" alt="Roasted coffee beans cooling on a tray in the roasting area.">
+        </a>
+      </div>
+
+      <p class="note">
+        Tip: Place your images in <code>prosite/gallery/</code> using names
+        <code>thumb1.jpg</code> through <code>thumb9.jpg</code> and
+        <code>full1.jpg</code> through <code>full9.jpg</code>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="site-wrap">
+      <p>&copy; 2026 Mountain Bean Café. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
