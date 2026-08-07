@@ -130,3 +130,37 @@ textarea:focus-visible {
   border-radius: 10px;
   display: block;
 }
+/* Media Query #1: nav + header layout at <= 768px */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Media Query #2: table/cards/layout at <= 768px */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 8px;
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
