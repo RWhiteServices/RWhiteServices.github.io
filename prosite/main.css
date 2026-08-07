@@ -99,3 +99,73 @@ nav[aria-label="Global navigation"] a {
     flex-wrap: wrap;
   }
 }
+/* ===== GLOBAL HEADER/NAV CONSISTENCY OVERRIDE ===== */
+header,
+header * {
+  font-family: "MySiteFont", Arial, sans-serif !important;
+}
+
+header {
+  background: #ffffff !important;
+}
+
+header .topbar,
+header .header-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+  gap: 16px !important;
+}
+
+header .logo,
+header h1.logo {
+  margin: 0 !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: #1f2a1f !important;
+  white-space: nowrap !important;
+}
+
+header nav[aria-label="Global navigation"],
+header .main-nav {
+  margin-left: auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 14px !important;
+  width: auto !important;
+}
+
+header nav[aria-label="Global navigation"] a,
+header .main-nav a {
+  color: #1f2a1f !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+header nav[aria-label="Global navigation"] a:hover,
+header nav[aria-label="Global navigation"] a:focus,
+header .main-nav a:hover,
+header .main-nav a:focus {
+  text-decoration: underline !important;
+}
+
+@media (max-width: 768px) {
+  header .topbar,
+  header .header-inner {
+    flex-wrap: wrap !important;
+  }
+
+  header nav[aria-label="Global navigation"],
+  header .main-nav {
+    width: 100% !important;
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+}
