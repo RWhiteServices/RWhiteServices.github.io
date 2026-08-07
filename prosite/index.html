@@ -4,54 +4,147 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mountain Bean Café | Home</title>
-  <meta name="description" content="Mountain Bean Café in Colorado serves small-batch coffee for locals and summer hikers. Explore our story, subscriptions, gallery, and location." />
+  <meta name="description" content="Mountain Bean Café in Colorado serves small-batch coffee for locals and summer hikers. Start your subscription today." />
   <meta name="robots" content="index,follow" />
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --text: #2b2118;
+      --brand: #6f4e37;
+      --brand-dark: #4b3426;
+      --light: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    header, footer {
+      background: #fff;
+      padding: 16px 20px;
+    }
+
+    .site-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--brand-dark);
+      margin-right: 14px;
+      font-weight: 600;
+    }
+
+    nav a:last-child { margin-right: 0; }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+    }
+
+    .hero {
+      min-height: 70vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--light);
+      background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin: 0 0 10px;
+    }
+
+    .hero p {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      margin: 0 0 24px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 8px;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus {
+      background: var(--brand-dark);
+    }
+
+    footer p {
+      margin: 0;
+      text-align: center;
+      color: #5a4a3f;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Mountain Bean Café</h1>
-    <p>Small-batch Colorado coffee for mountain mornings.</p>
-
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="subscription.html">Subscription</a> |
-      <a href="gallery.html">Gallery</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
-    <hr />
+    <div class="site-wrap topbar">
+      <h1 class="logo">Mountain Bean Café</h1>
+      <nav aria-label="Global navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section aria-labelledby="hero-heading">
-      <h2 id="hero-heading">Fuel Your Next Adventure</h2>
-      <p>
-        Whether you’re heading to the trail or walking historic downtown,
-        Mountain Bean Café is your stop for fresh-roasted coffee, house-made pastries,
-        and a warm Colorado welcome.
-      </p>
-      <p>
-        We source quality beans, roast in small batches, and serve every cup with care.
-        Visit us in person, then stay connected through our coffee subscription.
-      </p>
-      <p>
-        <a href="subscription.html">View Subscription Plans</a>
-      </p>
-    </section>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <!-- Hero headline -->
+        <h2 id="hero-title">Fresh Roasted Coffee for Every Mountain Morning</h2>
 
-    <section aria-labelledby="highlights-heading">
-      <h2 id="highlights-heading">Why Visitors Come Back</h2>
-      <ul>
-        <li>Locally roasted beans with seasonal flavor profiles</li>
-        <li>Quick service for hikers and travelers on the go</li>
-        <li>Comfortable café space to relax, recharge, and plan your next stop</li>
-      </ul>
+        <!-- Sub-headline -->
+        <p>From summer travelers to local regulars, we brew small-batch Colorado coffee that keeps adventures going.</p>
+
+        <!-- CTA button to subscription page -->
+        <a class="cta-button" href="subscription.html">Start Your Subscription</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <hr />
-    <p>&copy; 2026 Mountain Bean Café</p>
+    <div class="site-wrap">
+      <p>&copy; 2026 Mountain Bean Café. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
