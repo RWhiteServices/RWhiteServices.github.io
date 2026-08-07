@@ -1,1 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain Bean Café | About</title>
+  <meta name="description" content="Read the Mountain Bean Café origin story and meet the people behind our small-batch Colorado coffee." />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --text: #2b2118;
+      --brand-dark: #4b3426;
+      --card: #ffffff;
+    }
 
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background: #fff;
+      padding: 16px 20px;
+    }
+
+    .site-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--brand-dark);
+      margin-right: 14px;
+      font-weight: 600;
+    }
+
+    nav a:last-child { margin-right: 0; }
+
+    nav a:hover,
+    nav a:focus { text-decoration: underline; }
+
+    main {
+      padding: 28px 20px;
+    }
+
+    .story-card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    figure {
+      margin: 22px 0 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 620px;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #5a4a3f;
+    }
+
+    footer p {
+      margin: 0;
+      text-align: center;
+      color: #5a4a3f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-wrap topbar">
+      <h1 class="logo">Mountain Bean Café</h1>
+      <nav aria-label="Global navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="site-wrap story-card">
+      <h2>Our Origin Story</h2>
+
+      <!-- Paragraph 1: Problem -->
+      <p>
+        Every summer, Colorado mountain towns fill with hikers, road-trippers, and families looking for memorable local places,
+        yet many coffee stops felt rushed and inconsistent. Visitors often had to choose between speed and quality, while locals
+        wanted a café that felt dependable, welcoming, and truly connected to the community. The founders of Mountain Bean Café
+        saw that gap firsthand and believed mornings could be better. They imagined a place where people could pause before the trail,
+        enjoy coffee roasted with intention, and feel like more than just another transaction at a counter.
+      </p>
+
+      <!-- Paragraph 2: Promise -->
+      <p>
+        That vision became our promise: serve carefully sourced, small-batch coffee with genuine hospitality and consistent quality
+        in every cup. We roast to highlight balanced flavor, train every team member to deliver friendly and reliable service, and
+        create a space where both first-time travelers and longtime regulars feel at home. Whether you stop in once during a mountain
+        vacation or join our subscription to keep Mountain Bean in your daily routine, our commitment stays the same—fresh coffee,
+        thoughtful craftsmanship, and a café experience worth coming back for again and again.
+      </p>
+
+      <figure>
+        <img src="staff.jpg" alt="Mountain Bean Café staff smiling behind the coffee bar while preparing espresso drinks for morning customers.">
+        <figcaption>Meet the Mountain Bean team.</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <div class="site-wrap">
+      <p>&copy; 2026 Mountain Bean Café. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
