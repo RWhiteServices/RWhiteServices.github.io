@@ -6,155 +6,16 @@
   <title>Mountain Bean Café | Contact</title>
   <meta name="description" content="Visit Mountain Bean Café in Greeley, Colorado. View our hours, location, and contact us by email." />
   <meta name="robots" content="index,follow" />
-  <style>
-    :root {
-      --bg: #f7f3ee;
-      --text: #2b2118;
-      --brand: #6f4e37;
-      --brand-dark: #4b3426;
-      --card: #ffffff;
-      --border: #d8cfc5;
-    }
+  <link rel="stylesheet" href="main.css" />
 
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-
-    header, footer {
-      background: #fff;
-      padding: 16px 20px;
-    }
-
-    .site-wrap {
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      margin: 0;
-      font-size: 1.4rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--brand-dark);
-      margin-right: 14px;
-      font-weight: 600;
-    }
-
-    nav a:last-child { margin-right: 0; }
-
-    nav a:hover,
-    nav a:focus { text-decoration: underline; }
-
-    main {
-      padding: 28px 20px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 10px;
-      padding: 22px;
-    }
-
-    h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 20px;
-      align-items: start;
-    }
-
-    .hours-list {
-      margin: 10px 0 18px;
-      padding-left: 18px;
-    }
-
-    .hours-list li {
-      margin-bottom: 6px;
-    }
-
-    .map-wrap {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      background: #eee;
-    }
-
-    .map-wrap iframe {
-      width: 100%;
-      height: 320px;
-      border: 0;
-      display: block;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      margin-top: 8px;
-      background: var(--brand);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 11px 18px;
-      border-radius: 8px;
-    }
-
-    .btn-primary:hover,
-    .btn-primary:focus {
-      background: var(--brand-dark);
-    }
-
-    .small-note {
-      color: #5a4a3f;
-      font-size: 0.92rem;
-      margin-top: 10px;
-    }
-
-    footer p {
-      margin: 0;
-      text-align: center;
-      color: #5a4a3f;
-    }
-
-    @media (max-width: 760px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .map-wrap iframe {
-        height: 280px;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="main.css">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XRYZYJWJE6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XRYZYJWJE6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRYZYJWJE6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XRYZYJWJE6');
+  </script>
 </head>
 <body>
   <header>
@@ -178,7 +39,7 @@
         <section aria-label="Address and hours">
           <p><strong>Mountain Bean Café</strong></p>
           <p>
-            123 1st Ave<br>
+            123 1st Ave<br />
             Greeley, CO 80631
           </p>
 
@@ -190,17 +51,33 @@
             <li>Thursday: 6:30 AM – 4:00 PM</li>
             <li>Friday: 6:30 AM – 5:00 PM</li>
             <li>Saturday: 7:00 AM – 5:00 PM</li>
-            <li>Sunday: 7:00 AM – 2:00 PM</li>*
-<section class="card" aria-labelledby="map-title">
-  <h2 id="map-title">Find Us in Greeley</h2>
+            <li>Sunday: 7:00 AM – 2:00 PM</li>
+          </ul>
 
-  <div class="map-wrap">
-    <iframe
-      title="Map showing Greeley, Colorado"
-      src="https://www.google.com/maps?q=Greeley%2C%20CO&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+          <a class="btn-primary" href="mailto:hello@mountainbeancafe.com">Email Us</a>
+          <p class="small-note">We typically respond within 24 hours.</p>
+        </section>
+
+        <section aria-labelledby="map-title">
+          <h3 id="map-title">Find Us in Greeley</h3>
+          <div class="map-wrap">
+            <iframe
+              title="Map showing Greeley, Colorado"
+              src="https://www.google.com/maps?q=Greeley%2C%20CO&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="site-wrap">
+      <p>&copy; 2026 Mountain Bean Café. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
